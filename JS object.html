@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Object</h1>
+    <h2>object</h2>
+    <script>
+      var sm = {
+        "girlG" : "aespa",
+        "boyG" : "NCT",
+        "girl Solo" : "BoA",
+      };
+      sm.president = "LeeSM";
+      document.write("President : "+sm.president+"<br>");
+      document.write("Girl Group : "+sm.girlG+"<br>");
+      document.write("BOY Group : "+sm.boyG+"<br>");
+      document.write("Girl Solo : "+sm["girl Solo"]+"<br>");
+      sm["boy Solo"] = "Kai";
+      document.write("Boy Solo : "+sm["boy Solo"]+"<br>")
+    </script>
+    <h2>Iterate</h2>
+    <script>
+      for(var key in sm){
+        document.write(key+' : '+sm[key]+'<br>');
+      }
+    </script>
+    <h2>Property & Method</h2>
+    <script>
+      sm.showAll = function(){
+        for(var key in this){
+          document.write(key+' : '+this[key]+'<br>');
+        }
+      }
+      sm.showAll();
+    </script>
+
+  </body>
+</html>
